@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180523132049) do
+ActiveRecord::Schema.define(version: 20180523132952) do
+
+  create_table "formulation_ingredients", force: :cascade do |t|
+    t.integer "formulation_id", null: false
+    t.integer "ingredient_id", null: false
+    t.decimal "percentage", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["formulation_id"], name: "index_formulation_ingredients_on_formulation_id"
+    t.index ["ingredient_id"], name: "index_formulation_ingredients_on_ingredient_id"
+  end
 
   create_table "formulations", force: :cascade do |t|
     t.string "name", null: false
