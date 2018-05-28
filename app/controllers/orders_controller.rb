@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
     end
 
     send_data pdf.render,
-              filename: "order",
+              filename: 'order.pdf',
               type: 'application/pdf',
               disposition: 'inline'
   end
