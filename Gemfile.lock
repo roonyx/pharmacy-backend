@@ -74,6 +74,7 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pdf-core (0.7.0)
+    pg (1.0.0)
     prawn (2.2.2)
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
@@ -139,6 +140,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.7)
   byebug
   listen (>= 3.0.5, < 3.2)
+  pg
   prawn (~> 2.2, >= 2.2.2)
   puma (~> 3.7)
   rails (~> 5.1.6)
