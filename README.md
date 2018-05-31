@@ -1,24 +1,44 @@
-# README
+# Pharmacy project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install
 
-Things you may want to cover:
+Clone the repo:
+```
+git clone git@github.com:roonyx/pharmacy-backend.git
+cd pharmacy-backend
+```
 
-* Ruby version
+#### Install Ruby 2.5
 
-* System dependencies
+[Install RVM](https://rvm.io/rvm/install)
 
-* Configuration
+```
+rvm install 2.5
+```
 
-* Database creation
+#### Install gems
+```
+bundle install
+```
 
-* Database initialization
+#### Create the databases
+```
+rake db:setup
+```
 
-* How to run the test suite
+#### Import data to DB
+```
+rake data:import
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Run server
+```
+rails s
+```
 
-* Deployment instructions
-
-* ...
+#### Deploy
+```
+git remote add heroku https://git.heroku.com/api-pharmacy.git
+git push heroku master
+heroku run db:migrate
+```
